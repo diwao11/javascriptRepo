@@ -51,5 +51,5 @@ var taskIncomplete = function(){
 		//append it to #incomplete-tasks
 }
 
-//Set the click handler to the addTask function. 
+//Set the click handler to the addTask function. So when this element has been clicked, it will then do the addTask function. Not the other way around.
 addButton.onclick = addTask;
