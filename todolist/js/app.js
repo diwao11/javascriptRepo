@@ -37,7 +37,7 @@ var deleteTask = function(){
 		//remove the parent list item from the ul
 }
 
-var taskComplete = function(){
+var taskCompleted = function(){
 	console.log('task complete');
 //Mark a task as complete
 	//when the checkbox is checked
@@ -51,5 +51,26 @@ var taskIncomplete = function(){
 		//append it to #incomplete-tasks
 }
 
+var bindTaskEvents = function(taskListItem, checkboxEventHandler){
+	//select it's children
+		//bind the editTask to edit button
+		//bind the deleteTask to the delete button
+		//bind checkboxEventHandler to the checkbox
+
+}
 //Set the click handler to the addTask function. So when this element has been clicked, it will then do the addTask function. Not the other way around.
 addButton.onclick = addTask;
+
+//cycle over incompleteTaskHolder ul list items
+for(var i; i < incompleteTasksHolder.children.length; i++){
+		//bind events to list items children (taskCompleted)
+		bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
+}
+
+//cycle over complete completedTaskHolder ul list items
+	for (var i; i < completedTasksHolder.children.length; i++){
+		//bind events to list item's children (taskIncompleted)
+		bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
+	}
+
+
