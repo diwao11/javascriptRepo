@@ -47,11 +47,13 @@ var createNewTaskElement = function(taskString){
 var addTask = function() {
   console.log('add task');  
   //Create a new list item with the text from the #new-task. What goes inside the () is 'some new task.'
-  var listItem = createNewTaskElement(taskInput.value);
+  var listItem = createNewTaskElement(taskInput.value); //getting the value of the string.
 
   //append listItem to incompleteTaskHolder
   incompleteTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
+
+  taskInput.value = " "; //setting the value to an empty string.
 };
 
 //Edit an existing task.
@@ -122,6 +124,7 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
 };
 //Set the click handler to the addTask function. So when this element has been clicked, it will then do the addTask function. Not the other way around.
 addButton.onclick = addTask;
+addButton.addEventListener("click", addTask); //need to add an addEventListener so that you can have multiple events and they don't override one another.
 
 //cycle over incompleteTaskHolder ul list items
 for(var i = 0; i < incompleteTasksHolder.children.length; i++){
