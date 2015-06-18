@@ -5,18 +5,35 @@ var addButton = document.getElementsByTagName('button')[0]; //first button. Sele
 var incompleteTasksHolder = document.getElementById('incomplete-tasks'); //incomplete-task
 var completedTasksHolder = document.getElementById('completed-tasks'); //completed tasks
 
+//New Task List Item
+var createNewTaskElement = function(taskString){
+	//create list item
+	var listItem = document.createElement("li");
+//input (checkbox)
+	var checkBox = document.createElement("input"); //type is a checkbox
+	//label
+	var label = document.createElement("label");
+	//input for (text)
+	var editInput = document.createElement("input");
+	//button.edit
+	var editButton = document.createElement("button");
+	//button.delete
+	var deleteButton = document.createElement("button");
+	//each of these elements need modifying
+	
+	//each element needs to be appended 
+
+	return listItem;
+}
+
 //Add a new task
 var addTask = function() {
-	console.log('add task');
-	//When button is pressed, 
-	//Create a new list item with the text from the #new-task
-	//input (checkbox)
-	//label
-	//input for (text)
-	//button.edit
-	//button.delete
-	//each of these elements need to be modified and appended.
-}
+	console.log('add task');	
+	//Create a new list item with the text from the #new-task. What goes inside the () is 'some new task.'
+	var listItem = createNewTaskElement();
+
+	//append listItem to incompleteTaskHolder
+	
 //Edit an existing task.
 var editTask = function(){
 	console.log('edit task');
