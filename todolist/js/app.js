@@ -52,11 +52,17 @@ var taskIncomplete = function(){
 }
 
 var bindTaskEvents = function(taskListItem, checkboxEventHandler){
+	console.log('binding happening');
 	//select it's children
+	var checkBox = taskListItem.querySelector("input[type=checked]");
+	var editButton = taskListItem.querySelector("button.edit");
+	var deleteButton = taskListItem.querySelector("button.delete");
 		//bind the editTask to edit button
+		editButton.onclick = editTask;
 		//bind the deleteTask to the delete button
+		deleteButton.onclick = deleteTask;
 		//bind checkboxEventHandler to the checkbox
-
+		checkBox.onchange = checkboxEventHandler;
 }
 //Set the click handler to the addTask function. So when this element has been clicked, it will then do the addTask function. Not the other way around.
 addButton.onclick = addTask;
