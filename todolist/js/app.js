@@ -64,7 +64,7 @@ var deleteTask = function(){
     var listItem = this.parentNode;
     var ul = listItem.parentNode;
     //remove the parent list item from the ul
-    ul.removeChild('listItem');
+    ul.removeChild(listItem);
 };
 
 var taskCompleted = function(){
@@ -111,10 +111,10 @@ for(var i = 0; i < incompleteTasksHolder.children.length; i++){
 }
 
 //cycle over complete completedTaskHolder ul list items
-  for (var i = 0; i < completedTasksHolder.children.length; i++){
-    //bind events to list item's children (taskIncompleted)
-    bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
-  }
+for (var i = 0; i < completedTasksHolder.children.length; i++){
+  //bind events to list item's children (taskIncompleted)
+  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
+}
 
 
   
