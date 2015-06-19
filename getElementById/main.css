@@ -1,0 +1,28 @@
+/*#one, 
+#two, 
+#three, 
+#four {
+  width: 60%;
+  margin: auto;
+  background-color: red;
+  color: white;
+  border-bottom: 2px solid grey;
+}*/
+
+h1 {
+  border-bottom: 2px solid black;
+}
+
+.hot {
+  width: 60%;
+  margin: auto;
+  background-color: red;
+  color: white;
+}
+
+.cool {
+  width: 60%;
+  margin: auto;
+  background-color: aqua;
+  color: white;
+}
