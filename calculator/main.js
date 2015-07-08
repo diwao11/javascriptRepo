@@ -13,3 +13,5 @@ var calculator = {
 
 
 //Using the console, you can see how calculator.add, calculator.sum, and calculator.clear in an object work. The object is a calculator and in this object, it has methods that you can use. 
+
+//CODE CHALLENGE: ADD a FUNCTION for MULTIPLY, SUBTRACT, AND DIVIDE. 
