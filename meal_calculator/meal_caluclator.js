@@ -1,3 +1,4 @@
+'use strict';
 var Diner = function(meal){
 	this.meal = meal;
 	
@@ -9,12 +10,14 @@ Diner.prototype.tax = function(){
 	// 	dinner += this.meal[i] + " ";
 	// }	//closing of for loop
 	var tax = this.meal * 1.09;
-	return tax * this.meal;
+	//return tax * this.meal;
+	console.log(tax);
 };	//closing the Diner Prototype dinner Method.	
 
 
 var dan = new Diner(10);
-console.log(dan);
+dan.tax();
+//console.log(dan.tax);
 
 
 // var adultDiner = function(){
