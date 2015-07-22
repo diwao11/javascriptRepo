@@ -1,7 +1,7 @@
 'use strict';
-var Diner = function(meal){
+var Diner = function(meal,bill){
 	this.meal = meal;
-	
+	this.bill = bill;
 };	//closing the Diner Constructor object.
 
 Diner.prototype.tax = function(){
@@ -11,9 +11,13 @@ Diner.prototype.tax = function(){
 	// }	//closing of for loop
 	var tax = this.meal * 1.09;
 	//return tax * this.meal;
-	console.log(tax);
+	//console.log(tax);
+	return tax;
 };	//closing the Diner Prototype dinner Method.	
-
+Diner.prototype.tip = function(){
+	var tip = tax * (this.meal * .015);		//need to do a closure here.
+	return tip;
+}
 
 var dan = new Diner(10);
 dan.tax();
